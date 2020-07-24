@@ -131,7 +131,7 @@
 
 % Boolean value to switch section color highlighting
 \newbool{acvSectionColorHighlight}
-\setbool{acvSectionColorHighlight}{true}
+\setbool{acvSectionColorHighlight}{false}
 
 % Awesome section color
 \def\@sectioncolor#1{%
@@ -623,6 +623,20 @@
     \vspace{-3.0mm}
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#3}}
     
+  \end{tabular*}%
+}
+
+\newcommand*{\cventryedu}[5]{%
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+    \ifempty{#4}
+      {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
+        \entrypositionstyle{#1} \\}  
+      {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
+      \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
+    \multicolumn{2}{L{\textwidth}}{\entrypositionstyle{#5}}
   \end{tabular*}%
 }
 
