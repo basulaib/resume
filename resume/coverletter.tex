@@ -1,0 +1,129 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{false}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+%\photo[circle,noedge,left]{}
+\name{Abdullah}{Basulaib}
+%\position{{\enskip\cdotp\enskip}}
+%\address{}
+
+\mobile{(+1) 416-887-4294}
+\email{basulaiba@gmail.com}
+% \homepage{}
+\github{basulaib}
+\linkedin{basulaiba}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra informations}
+
+% \quote{}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {Postmedia Network Inc.}
+  {}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Job Application for Junior Software Developer}
+% How the letter is opened
+\letteropening{\textbf{Dear Hiring Manager,}}
+% How the letter is closed
+\letterclosing{\textbf{Sincerely,}}
+% Any enclosures with the letter
+% \letterenclosure[Attached]{Curriculum Vitae}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {}
+  {}
+  {}
+
+% Print the title with above letter informations
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+\lettersection{About Me}
+\textbf{I'm a York University Computer Science graduate. I'm a passionate, motivated and hard-working developer. I have lead many of  the projects throughout my university years, with clear and effective communication while working in a safe, respectful and open environment. I express my thoughts and ideas loud and clear to the team, and accept and appreciate reply and feedback as well. Additionally, I am also willing to learn new knowledge and experiences.
+}
+\lettersection{About Me}
+\textbf{During my contribution to the Soccer Twitter project, I took leadership of the project and managed the project's specifications and deadlines, along with having the responsibility of laying the foundation of the project. I designed and wrote the base foundation of the project, using real-time data coming from Twitter. I was instrumental in developing the data flow and organization of the incoming data. \\
+\\
+I am also attentive to continuously look out for difficulties or bugs. When we faced a bug with the real-time data stream from Twitter, I suggested and implemented that we do the data cleaning after the data collection and not during. This led to 50\% faster data processing and analysis.\\
+\\
+When I am not working on projects, I like to spend my time learning more about frameworks, libraries, and programming languages. That includes reading documentation, exploring, and experimenting. I am always ready and happy to try any new technology. I took the time to learn Flask to make my own web projects. 
+
+}
+\lettersection{Why Me?}
+\textbf{I believe I fit for the Junior Software Developer position as I bring my curiosity, drive, and effective communication skills for this position. I love working with teams and learning a lot with them, it is an experience I'm looking forward to. Thank you for considering my application and I look forward to hearing from you regarding this position.
+}
+\end{cvletter}
+
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter informations
+\makeletterclosing
+
+\end{document}
